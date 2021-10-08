@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dummy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
+    <script src="https://use.fontawesome.com/beed62a6a7.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0-rc.1/dist/js.cookie.min.js"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    
+    <style>
+       .floating_box {
+        width: 115px;
+        position: fixed;
+        top: 0px;
+        height: 30px;
+        background-color: white;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class=""> Dummy content </h1>
+<!--       <h1 class="project-name"> COVID-19 Analytics </h1> -->
+<!--       <h2 class="project-tagline">Regular System Maintenance!!</h2> -->
+    </section>
+
+    <section class="main-content">
+
+      <!--<iframe src="xxxxxxx" width="100%" height="1000" style="border:none;"></iframe>-->
+      <iframe id="dashboard" src="https://drive.google.com/file/d/15FZJursGS2NQ7s5u6O9-0NYTMYDIlXlw/view" width="100%" height="2400" style=""></iframe>
+  
+      <p>
+        This dashboard presents the latest pandemic risk assessment using the methodology in 
+        “On Topological Properties of COVID-19: Predicting and Assessing Pandemic Risk with Network Statistics”. <br />
+        Ref: <a href= "https://www.nature.com/articles/s41598-021-84094-z" target="_blank">https://www.nature.com/articles/s41598-021-84094-z</a>
+      </p>
+
+
+    </section>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172410617-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-172410617-1');
+    </script>
+
+    <script>
+      const headers = new Headers()
+      headers.append("Content-Type", "application/json")
+
+      const body = {"message":"Welcome to dummy dashboard", "dashboard": "dummy"}
+
+      const options = {
+        method: "POST",
+        headers,
+        mode: "cors",
+        body: JSON.stringify(body),
+      }
+
+      fetch("https://ef7cbd86416f709430f96140ca02050f.m.pipedream.net", options).then(response => {
+        console.log(response)
+      }).catch(err => {
+        console.error("[error] " + err.message)
+      })
+    </script>
+    
+    <script>
+      // alert("Today will have regular system maintenance. This dashboard will be affected.")
+    </script>
+    
+  </body>
+</html>
